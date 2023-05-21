@@ -102,4 +102,5 @@ apt-get install ninja-build
 
 pip install opencv-python==4.5.5.64
 
+
 echo "****************** Installation complete! ******************"
