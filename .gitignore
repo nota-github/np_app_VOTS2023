@@ -1,0 +1,9 @@
+*.idea
+*~
+*__pycache__*
+*.pyc
+*.pytest_cache
+*.csv
+*.pth.tar
+local.py
+vots23/
