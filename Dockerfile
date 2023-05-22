@@ -24,4 +24,7 @@ RUN apt-get install -y \
     libgl1-mesa-glx \
     libglib2.0-0 
 
+# download pretrained model
+
+
 CMD ["bash"]
