@@ -1,6 +1,6 @@
 FROM nvcr.io/nvidia/pytorch:22.07-py3
 
-ENV HOME=/workspace
+ENV HOME=/root
 ENV APP_PATH=$HOME/np_app_VOTS2023
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
