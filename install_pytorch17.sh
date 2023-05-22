@@ -29,7 +29,7 @@ pip install pandas
 echo ""
 echo ""
 echo "****************** Installing tqdm ******************"
-conda install -y tqdm
+pip install tqdm
 
 echo ""
 echo ""
