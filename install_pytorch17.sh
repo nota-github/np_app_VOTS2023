@@ -103,6 +103,7 @@ echo "****************** Install ninja-build for Precise ROI pooling ***********
 apt-get install ninja-build
 
 pip install opencv-python==4.5.5.64
-
+pip uninstall numpy
+pip install numpy==1.22.4
 
 echo "****************** Installation complete! ******************"

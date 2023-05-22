@@ -10,8 +10,8 @@ import sys
 import time
 import os
 import numpy as np
-sys.path.append('/workspace/wooksu/MixFormer/')
-sys.path.append('/workspace/wooksu/MixFormer/external/AR/')
+sys.path.append('/root/np_app_VOTS2023/')
+sys.path.append('/root/np_app_VOTS2023/external/AR/')
 from lib.test.tracker.mixformer_convmae_online import MixFormerOnline
 from pytracking.ARcm_seg import ARcm_seg
 from pytracking.vot20_utils import *
@@ -31,7 +31,7 @@ class MIXFORMER_ALPHA_SEG(object):
         '''Alpha-Refine'''
         # project_path = os.path.join(os.path.dirname(__file__), '..', '..')
         # refine_root = os.path.join(project_path, 'ltr/checkpoints/ltr/ARcm_seg/')
-        refine_root = os.path.join('/workspace/wooksu/MixFormer/external/AR/ltr/ARcm_seg/')
+        refine_root = os.path.join('/root/np_app_VOTS2023/external/AR/ltr/ARcm_seg/')
         refine_path = os.path.join(refine_root, refine_model_name)
         '''2020.4.25 input size: 384x384'''
         self.alpha = ARcm_seg(refine_path, input_sz=384)
@@ -53,9 +53,6 @@ class MIXFORMER_ALPHA_SEG(object):
         '''TRACK'''
         '''base tracker'''
         outputs = self.tracker.track(img_RGB)
-        # with open('/workspace/check.txt', 'a') as f:
-        #     f.write(f"{outputs['pred_score']}\n")
-        
         pred_bbox = outputs['target_bbox']
         pred_score = outputs['pred_score']
         '''Step2: Mask report'''
@@ -68,7 +65,7 @@ class MIXFORMER_ALPHA_SEG(object):
 
 def main(vis=False):
     color = [(255, 0, 0),(0, 255, 0),(0, 0, 255),(255, 255, 0),(255, 0, 255),(0, 255, 255),(127, 127, 127),(127, 0, 255)]
-    save_dir = '/workspace/vots2023_debug'
+    save_dir = '/root/vots2023_debug'
     if vis:
         os.makedirs(save_dir, exist_ok=True)
     refine_model_name = 'ARcm_coco_seg_only_mask_384'
