@@ -169,7 +169,7 @@ Yutao Cui: cuiyutao@smail.nju.edu.cn
 * We use the implementation of the CvT from the official repo [CvT](https://github.com/leoxiaobin/CvT).  
 
 ## ✏️ Citation
-
+ 
 If you think this project is helpful, please feel free to leave a star⭐️ and cite our paper:
 
 ```
