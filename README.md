@@ -1,6 +1,7 @@
 # MixFormer
 
 '''
+
 git clone https://github.com/nota-github/np_app_VOTS2023.git
 cd np_app_VOTS2023
 docker build -t notadockerhub/np_app_vots2023:latest -f ./Dockerfile .
@@ -26,6 +27,7 @@ python tracking/create_default_local_file.py --workspace_dir <np_app_VOTS2023 di
 export PYTHONPATH=<absolute_path_of_AR>:$PYTHONPATH
 python -c "from pytracking.evaluation.environment import create_default_local_file; create_default_local_file()"
 python -c "from ltr.admin.environment import create_default_local_file; create_default_local_file()"
+
 '''
 
 '''
