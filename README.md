@@ -5,36 +5,27 @@ git clone https://github.com/nota-github/np_app_VOTS2023.git
 cd np_app_VOTS2023
 docker build -t notadockerhub/np_app_vots2023:latest -f ./Dockerfile .
 docker run --name container_name --shm-size=8g -it --gpus all -v /your_data_dir:/workspace/datasets notadockerhub/np_app_vots2023:latest
-
 cd np_app_VOT2023
 mkdir external/vots2023
 cd external/vots2023/
 mkdir val
 mkdir test
-
 cd val
 vot initialize tests/multiobject
-
 cd ../test
 vot initialize vots2023
-
 mkdir models
 cd models
 wget https://netspresso-application-public.s3.ap-northeast-2.amazonaws.com/mixformer_models.zip
 unzip mixformer_models.zip
-
 mkdir external/AR/ltr/ARcm_seg/
 mkdir external/AR/ltr/ARcm_seg/ARcm_coco_seg_only_mask_384/ 
 cd external/AR/ltr/ARcm_seg/ARcm_coco_seg_only_mask_384/
 wget https://netspresso-application-public.s3.ap-northeast-2.amazonaws.com/ARnet_seg_mask_ep0040.pth.tar
-
 python tracking/create_default_local_file.py --workspace_dir <np_app_VOTS2023 dir path> --data_dir <data> --save_dir <np_app_VOTS2023 dir path>
-
 export PYTHONPATH=<absolute_path_of_AR>:$PYTHONPATH
-
 python -c "from pytracking.evaluation.environment import create_default_local_file; create_default_local_file()"
 python -c "from ltr.admin.environment import create_default_local_file; create_default_local_file()"
-
 '''
 
 '''
