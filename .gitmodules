@@ -1,0 +1,3 @@
+[submodule "external/AR/pytracking/VOTS2023/sam_hq"]
+	path = external/AR/pytracking/VOTS2023/sam_hq
+	url = https://github.com/SysCV/sam-hq.git
