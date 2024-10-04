@@ -40,6 +40,13 @@ cd sam-hq
 pip install -e .
 ```
 
+# Terms of use
+The vision object tracking model published in this repository was developed by combining several modules (e.g., object tracking model, image segmentation model). Commercial use of any modifications, additions, or newly trained parameters made to combine these modules is not allowed. However, commercial use of the unmodified modules is allowed under their respective licenses. If you wish to use the individual modules commercially, you may refer to their original repositories and licenses provided below.
+
+Object tracking model (license) link : [Github](https://github.com/MCG-NJU/MixFormer), [License](https://github.com/MCG-NJU/MixFormer?tab=MIT-1-ov-file#readme)
+
+Image segmentation model (license) link : [Github](https://github.com/SysCV/sam-hq), [License](https://github.com/SysCV/sam-hq?tab=Apache-2.0-1-ov-file#readme)
+
 The official implementation of the CVPR 2022 paper [**MixFormer: End-to-End Tracking with Iterative Mixed Attention**](http://arxiv.org/abs/2203.11082)
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/mixformer-end-to-end-tracking-with-iterative-2/visual-object-tracking-on-lasot)](https://paperswithcode.com/sota/visual-object-tracking-on-lasot?p=mixformer-end-to-end-tracking-with-iterative-2)
